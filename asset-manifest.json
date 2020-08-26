@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Inventory/static/css/main.eddbea37.chunk.css",
+    "main.css": "/Inventory/static/css/main.a706230e.chunk.css",
     "main.js": "/Inventory/static/js/main.e69ac3d8.chunk.js",
     "main.js.map": "/Inventory/static/js/main.e69ac3d8.chunk.js.map",
     "runtime-main.js": "/Inventory/static/js/runtime-main.9f9fd66a.js",
@@ -9,10 +9,10 @@
     "static/js/2.e0f35313.chunk.js": "/Inventory/static/js/2.e0f35313.chunk.js",
     "static/js/2.e0f35313.chunk.js.map": "/Inventory/static/js/2.e0f35313.chunk.js.map",
     "index.html": "/Inventory/index.html",
-    "precache-manifest.03c533256b48698ef76d789abda7b068.js": "/Inventory/precache-manifest.03c533256b48698ef76d789abda7b068.js",
+    "precache-manifest.a09e0269e82f3442f847265f11f5e74a.js": "/Inventory/precache-manifest.a09e0269e82f3442f847265f11f5e74a.js",
     "service-worker.js": "/Inventory/service-worker.js",
     "static/css/2.9ff1a1c3.chunk.css.map": "/Inventory/static/css/2.9ff1a1c3.chunk.css.map",
-    "static/css/main.eddbea37.chunk.css.map": "/Inventory/static/css/main.eddbea37.chunk.css.map",
+    "static/css/main.a706230e.chunk.css.map": "/Inventory/static/css/main.a706230e.chunk.css.map",
     "static/js/2.e0f35313.chunk.js.LICENSE.txt": "/Inventory/static/js/2.e0f35313.chunk.js.LICENSE.txt",
     "static/media/animeLink.jpg": "/Inventory/static/media/animeLink.35ad4442.jpg",
     "static/media/figuresLink.jpg": "/Inventory/static/media/figuresLink.b1bc9525.jpg",
@@ -24,7 +24,7 @@
     "static/js/runtime-main.9f9fd66a.js",
     "static/css/2.9ff1a1c3.chunk.css",
     "static/js/2.e0f35313.chunk.js",
-    "static/css/main.eddbea37.chunk.css",
+    "static/css/main.a706230e.chunk.css",
     "static/js/main.e69ac3d8.chunk.js"
   ]
 }
