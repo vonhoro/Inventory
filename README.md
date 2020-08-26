@@ -1,0 +1,2 @@
+# Inventory
+An inventory page
