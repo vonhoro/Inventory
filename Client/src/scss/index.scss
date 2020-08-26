@@ -1,0 +1,286 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "node_modules/@blueprintjs/core/lib/scss/variables";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+$color1: #e1bae1;
+$color2: #df90b8;
+$color3: #cf6a97;
+$color4: #b4497c;
+$color5: #8e3168;
+$color6: #5c255c;
+
+a:link {
+  color: $color5;
+  text-decoration: underline;
+}
+a:visited {
+  color: $color6;
+  text-decoration: underline;
+}
+.Nav-bar {
+  background-color: $color2;
+}
+
+body {
+  background-color: $color1;
+  padding-top: $pt-navbar-height;
+}
+.Popover-message {
+  padding: 1em;
+  color: white;
+
+  background-color: $color6;
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .Popover-buttons {
+    display: flex;
+
+    width: 100%;
+    justify-content: center;
+    button {
+      margin-left: 1em;
+    }
+  }
+}
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.Links {
+  display: flex;
+
+  width: 100%;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  .Link {
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+    justify-content: center;
+    .Button {
+      button {
+        margin: 1em;
+        color: white;
+        background-color: $color6;
+      }
+    }
+    img {
+      width: 20em;
+      height: 15em;
+      align-self: center;
+    }
+  }
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .white-space {
+    padding: 1em;
+  }
+  p {
+    width: 40%;
+    text-indent: 1em;
+    text-align: justify;
+  }
+  .change-user-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+
+    .Boton {
+      background-color: $color3;
+    }
+  }
+  .Add-item {
+    padding: 2%;
+  }
+  .Spin {
+    align-self: center;
+    z-index: -1;
+  }
+
+  .List {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 22% 22% 22% 22%;
+    align-content: center;
+    justify-content: center;
+
+    button {
+      margin-bottom: 1em;
+    }
+    .Item:hover {
+      box-shadow: 0 0 1em 0.1em $color6;
+    }
+    .Item {
+      border-radius: 2em;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      background-color: $color3;
+      height: auto;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      margin-bottom: 5%;
+      padding: 1%;
+      img {
+        box-shadow: 0 0 1em 0.5em $color5;
+        margin-top: 1em;
+        width: 7em;
+        height: 10em;
+      }
+      .title {
+        height: auto;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .title:hover {
+        white-space: normal;
+      }
+      h1 {
+        font-size: 1.4em;
+        text-align: center;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .Description {
+        width: 60%;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .description-text {
+        margin-left: 1em;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+      }
+      .description-text:hover {
+        white-space: normal;
+      }
+
+      h2 {
+        font-size: 1em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.Sinopsis {
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 2%;
+  box-shadow: 0 0 1em 1em $color5;
+  position: fixed;
+  margin-left: 25%;
+  height: 85%;
+  width: 50%;
+  padding: 1em 3em 1em 3em;
+  display: flex;
+  flex-direction: column;
+  background-color: $color4;
+  .sinopsis-img {
+    width: 40%;
+    align-self: center;
+    box-shadow: 0 0 0em 0.3em $color6;
+  }
+  .close {
+    margin-left: 90%;
+    width: 4em;
+  }
+  h1 {
+    text-align: center;
+  }
+  h3 {
+    width: 100%;
+
+    text-align: center;
+  }
+  p {
+    width: 100%;
+    text-align: justify;
+    text-indent: 1em;
+    height: auto;
+  }
+}
+.form-div {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 90%;
+  height: auto;
+  margin-left: 10%;
+  padding: 1%;
+  position: fixed;
+  .image-preview {
+    width: 40%;
+    box-shadow: 0 0 0em 1em $color5;
+    margin: 10%;
+    height: 60%;
+    background-color: $color5;
+  }
+
+  .Edit {
+    margin-top: 2%;
+    box-shadow: 0 0 1em 1em $color5;
+    margin-left: 30%;
+    background-color: $color4;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+    .Edit-entry {
+      align-items: center;
+      width: 100%;
+    }
+    .Edit-input {
+      width: 100%;
+    }
+    .File-input {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    .edit-buttons {
+      align-self: center;
+      display: flex;
+      justify-content: space-around;
+    }
+    .submit-button {
+      width: 40%;
+      align-self: center;
+    }
+    label {
+      text-align: left;
+      font-size: 2em;
+      width: 30%;
+      text-indent: 0em;
+      text-align: inline;
+    }
+    h4 {
+      font-size: 1em;
+      width: 6em;
+    }
+
+    p {
+      font-size: 0.6em;
+      text-align: justify;
+    }
+  }
+}
