@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Inventory/static/css/main.1973fdad.chunk.css",
+    "main.js": "/Inventory/static/js/main.17a58255.chunk.js",
+    "main.js.map": "/Inventory/static/js/main.17a58255.chunk.js.map",
+    "runtime-main.js": "/Inventory/static/js/runtime-main.9f9fd66a.js",
+    "runtime-main.js.map": "/Inventory/static/js/runtime-main.9f9fd66a.js.map",
+    "static/css/2.9ff1a1c3.chunk.css": "/Inventory/static/css/2.9ff1a1c3.chunk.css",
+    "static/js/2.e0f35313.chunk.js": "/Inventory/static/js/2.e0f35313.chunk.js",
+    "static/js/2.e0f35313.chunk.js.map": "/Inventory/static/js/2.e0f35313.chunk.js.map",
+    "index.html": "/Inventory/index.html",
+    "precache-manifest.5070ffc8e0e450585903afdf530168d3.js": "/Inventory/precache-manifest.5070ffc8e0e450585903afdf530168d3.js",
+    "service-worker.js": "/Inventory/service-worker.js",
+    "static/css/2.9ff1a1c3.chunk.css.map": "/Inventory/static/css/2.9ff1a1c3.chunk.css.map",
+    "static/css/main.1973fdad.chunk.css.map": "/Inventory/static/css/main.1973fdad.chunk.css.map",
+    "static/js/2.e0f35313.chunk.js.LICENSE.txt": "/Inventory/static/js/2.e0f35313.chunk.js.LICENSE.txt",
+    "static/media/animeLink.jpg": "/Inventory/static/media/animeLink.35ad4442.jpg",
+    "static/media/figuresLink.jpg": "/Inventory/static/media/figuresLink.b1bc9525.jpg",
+    "static/media/index.css": "/Inventory/static/media/icons-20.cef8cdbb.woff",
+    "static/media/lightNovelLink.jpg": "/Inventory/static/media/lightNovelLink.e800328a.jpg",
+    "static/media/mangaLink.jpg": "/Inventory/static/media/mangaLink.b5d1d167.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f9fd66a.js",
+    "static/css/2.9ff1a1c3.chunk.css",
+    "static/js/2.e0f35313.chunk.js",
+    "static/css/main.1973fdad.chunk.css",
+    "static/js/main.17a58255.chunk.js"
+  ]
+}
