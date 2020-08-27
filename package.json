@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "http://vonhoro.github.io/Inventory",
+  "homepage": "https://vonhoro.github.io/Inventory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
