@@ -1,6 +1,8 @@
 @import url(~normalize.css);
 @import url(~@blueprintjs/core/lib/css/blueprint.css);
-
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
 @import url(~@blueprintjs/icons/lib/css/blueprint-icons.css);
 a:link {
   color: #8e3168;
@@ -11,10 +13,15 @@ a:visited {
   text-decoration: underline; }
 
 .Nav-bar {
+  width: 100%;
   background-color: #df90b8; }
 
+@media (max-width: 679px) and (orientation: portrait) {
+  .Nav-bar .Nav-bar-buttons {
+    display: none; } }
+
 body {
-  background-color: #e1bae1;
+  background-color: #df90b8;
   padding-top: 50px; }
 
 .Popover-message {
@@ -44,9 +51,15 @@ body {
   align-content: center;
   justify-content: space-around;
   text-align: center; }
+  @media (orientation: portrait) {
+    .Links {
+      flex-direction: column; } }
   .Links .Link {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    padding: 1%;
+    align-self: center;
     align-content: center;
     justify-content: center; }
     .Links .Link .Button button {
@@ -54,8 +67,8 @@ body {
       color: white;
       background-color: #5c255c; }
     .Links .Link img {
-      width: 20em;
-      height: 15em;
+      width: 100%;
+      height: 100%;
       align-self: center; }
 
 .page-container {
@@ -68,6 +81,13 @@ body {
     width: 40%;
     text-indent: 1em;
     text-align: justify; }
+    @media (orientation: portrait) {
+      .page-container p {
+        width: 80%; } }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .page-container p {
+    width: 80%; } }
   .page-container .change-user-buttons {
     display: flex;
     flex-direction: column;
@@ -86,6 +106,14 @@ body {
     grid-template-columns: 22% 22% 22% 22%;
     align-content: center;
     justify-content: center; }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .page-container .List {
+    grid-template-columns: 44% 44%; } }
+
+@media (max-width: 320px) and (orientation: portrait) {
+  .page-container .List {
+    grid-template-columns: 88%; } }
     .page-container .List button {
       margin-bottom: 1em; }
     .page-container .List .Item:hover {
@@ -122,12 +150,20 @@ body {
         width: 60%;
         flex-direction: column;
         justify-content: flex-end; }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .page-container .List .Item .Description {
+    width: 90%; } }
       .page-container .List .Item .description-text {
         margin-left: 1em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: left; }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .page-container .List .Item .description-text {
+    white-space: normal; } }
       .page-container .List .Item .description-text:hover {
         white-space: normal; }
       .page-container .List .Item h2 {
@@ -148,10 +184,25 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #b4497c; }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .Sinopsis {
+    width: 80%;
+    margin-left: 10%; } }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .Sinopsis {
+    width: 80%;
+    margin-left: 10%;
+    height: 90%; } }
   .Sinopsis .sinopsis-img {
     width: 40%;
     align-self: center;
     box-shadow: 0 0 0em 0.3em #5c255c; }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .Sinopsis .sinopsis-img {
+    width: 20%; } }
   .Sinopsis .close {
     margin-left: 90%;
     width: 4em; }
@@ -174,12 +225,43 @@ body {
   margin-left: 10%;
   padding: 1%;
   position: fixed; }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .form-div {
+    grid-template-columns: 70% 30%; } }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .form-div {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80%;
+    grid-template-columns: 90%;
+    margin-left: 0; } }
   .form-div .image-preview {
-    width: 40%;
     box-shadow: 0 0 0em 1em #8e3168;
+    width: 40%;
     margin: 10%;
     height: 60%;
     background-color: #8e3168; }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .form-div .image-preview {
+    width: 70%; } }
+
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+  .form-div .image-preview {
+    width: 50%;
+    margin: 20%;
+    height: 70%; } }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .form-div .image-preview {
+    grid-row: 1 / span 1;
+    width: 30%;
+    height: 50%;
+    align-self: center;
+    margin-left: 50%;
+    justify-content: center; } }
   .form-div .Edit {
     margin-top: 2%;
     box-shadow: 0 0 1em 1em #8e3168;
@@ -189,11 +271,47 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1em; }
+
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+  .form-div .Edit {
+    width: 100%;
+    margin-left: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 85%; } }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .form-div .Edit {
+    width: 100%;
+    margin-left: -10%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 85%; } }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .form-div .Edit {
+    width: 100%;
+    margin-left: 12%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 85%; } }
     .form-div .Edit .Edit-entry {
       align-items: center;
       width: 100%; }
+
+@media (max-width: 450px) and (orientation: portrait) {
+  .form-div .Edit .Edit-entry {
+    width: 160%; } }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .form-div .Edit .Edit-entry {
+    width: 120%; } }
     .form-div .Edit .Edit-input {
       width: 100%; }
+
+@media (max-width: 450px) and (orientation: portrait) {
+  .form-div .Edit .Edit-input {
+    width: 40%; } }
     .form-div .Edit .File-input {
       width: 100%;
       margin-bottom: 1em; }

@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {
-  Alignment,
-  Navbar,
-  ButtonGroup,
-  Button,
-} from "@blueprintjs/core";
+import { Alignment, Navbar, ButtonGroup, Button } from "@blueprintjs/core";
 import { UserContext } from "./context/userContext";
 // Pages
 
@@ -15,7 +10,6 @@ import Manga from "./pages/Manga";
 import LN from "./pages/Light-Novels";
 import Anime from "./pages/Anime";
 import Figures from "./pages/Figures";
-
 
 import "./css/index.css";
 
@@ -27,35 +21,39 @@ function App() {
   });
   return (
     <Router>
-      <Navbar className="Nav-bar" fixedToTop={true}>
-        <Navbar.Group align={Alignment.LEFT}>
-          <Navbar.Heading>Za WeeeebZone </Navbar.Heading>
-          <Navbar.Divider />
-          <ButtonGroup minimal={true} large={true}>
-            <Link to="/Inventory">
-              {" "}
-              <Button icon="home">Home</Button>
-            </Link>
+      <div className="Nav-bar">
+        <Navbar className="Nav-bar" fixedToTop={true}>
+          <Navbar.Group align={Alignment.LEFT}>
+            <Navbar.Heading>Za WeeeebZone </Navbar.Heading>
+            <Navbar.Divider />
+            <ButtonGroup minimal={true} large={true}>
+              <Link to="/Inventory">
+                {" "}
+                <Button icon="home">Home</Button>
+              </Link>
 
-            <Link to="/Inventory/About">
-              {" "}
-              <Button>About</Button>
-            </Link>
-            <Link to="/Inventory/Anime">
-              <Button>Anime</Button>
-            </Link>
-            <Link to="/Inventory/Manga">
-              <Button>Manga</Button>
-            </Link>
-            <Link to="/Inventory/Figure">
-              <Button>Figures</Button>
-            </Link>
-            <Link to="/Inventory/LightNovel">
-              <Button>Light-novels</Button>
-            </Link>
-          </ButtonGroup>
-        </Navbar.Group>
-      </Navbar>
+              <Link to="/Inventory/About">
+                {" "}
+                <Button>About</Button>
+              </Link>
+              <div className="Nav-bar-buttons">
+                <Link to="/Inventory/Anime">
+                  <Button>Anime</Button>
+                </Link>
+                <Link to="/Inventory/Manga">
+                  <Button>Manga</Button>
+                </Link>
+                <Link to="/Inventory/Figure">
+                  <Button>Figures</Button>
+                </Link>
+                <Link to="/Inventory/LightNovel">
+                  <Button>Light-novels</Button>
+                </Link>
+              </div>
+            </ButtonGroup>
+          </Navbar.Group>
+        </Navbar>
+      </div>
       <Switch>
         <UserContext.Provider value={{ user, setUser }}>
           <Route path="/Inventory/About">

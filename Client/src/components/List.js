@@ -14,7 +14,9 @@ export default function Media(props) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`https://floating-coast-95789.herokuapp.com/api/${media}s`);
+        const response = await axios.get(
+          `https://floating-coast-95789.herokuapp.com/api/${media}s`
+        );
         setMedias(response.data.data);
         setData(true);
       } catch (err) {
@@ -23,7 +25,7 @@ export default function Media(props) {
       }
     }
     fetchData();
-  },);
+  });
 
   const deleteEntry = async (elementToDelete) => {
     const originalCover = elementToDelete.cover.replace(
@@ -47,7 +49,8 @@ export default function Media(props) {
     );
 
     const response = await axios.delete(
-      `https://floating-coast-95789.herokuapp.com/api/${elementToDelete}/` + elementToDelete._id
+      `https://floating-coast-95789.herokuapp.com/api/${elementToDelete}/` +
+        elementToDelete._id
     );
 
     window.history.back();
@@ -57,7 +60,10 @@ export default function Media(props) {
     <Router>
       <Switch>
         {medias.map((mediaElement, index) => (
-          <Route key={index} path={`/Inventory/${mediaName}/${mediaElement.route}`}>
+          <Route
+            key={index}
+            path={`/Inventory/${mediaName}/${mediaElement.route}`}
+          >
             <MediaSinopsis
               Sinopsis={mediaElement.sinopsis}
               Media={mediaElement.title}
@@ -155,7 +161,9 @@ export default function Media(props) {
                     <></>
                   )}
                   {props.User.admin || props.User.moderator ? (
-                    <Link to={`/Inventory/${mediaName}/Edit/${mediaElement.route}`}>
+                    <Link
+                      to={`/Inventory/${mediaName}/Edit/${mediaElement.route}`}
+                    >
                       <Button
                         intent="Warning"
                         fill={true}
